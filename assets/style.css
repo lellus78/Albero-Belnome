@@ -1,0 +1,213 @@
+:root{
+  --bg:#F7F2E9; --carta:#FFFDF9; --ink:#33251A; --ink2:#5E4C3E; --muto:#8A7767; --linea:#E5DACA; --linea2:#D6C7B2;
+  --marrone:#7A5230; --marrone2:#9A5B2A; --crema:#EFE5D5; --uomo:#2F6E93; --donna:#A2506A; --ombra:0 1px 2px rgba(51,37,26,.06),0 2px 8px rgba(51,37,26,.06);
+  --serif:"Palatino Linotype",Palatino,"Book Antiqua","TeX Gyre Pagella","URW Palladio L",Georgia,serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans)}
+a{color:var(--marrone);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{font-family:var(--serif);font-weight:700;color:var(--ink);margin:0}
+button,input,select{font:inherit}
+.caricamento{padding:48px 16px;text-align:center;color:var(--muto)}
+
+/* testata */
+.testata{background:var(--marrone);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.testata-in{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.marchio{display:flex;align-items:center;gap:10px;color:#fff}
+.marchio:hover{text-decoration:none}
+.marchio svg{width:32px;height:32px;fill:#F3E3C7;flex:none}
+.marchio b{display:block;font-family:var(--serif);font-size:20px;line-height:1.1}
+.marchio small{display:block;font-size:12px;color:#EAD9BE}
+.cerca-rapida{flex:1;min-width:200px;max-width:420px;display:flex;margin-left:auto}
+.cerca-rapida input{flex:1;min-width:0;border:0;border-radius:6px 0 0 6px;padding:8px 12px;background:#FFFDF9;color:var(--ink)}
+.cerca-rapida button{border:0;border-radius:0 6px 6px 0;background:#5E3D22;padding:0 12px;cursor:pointer}
+.cerca-rapida svg{width:18px;height:18px;fill:#fff;display:block}
+.menu{display:flex;gap:4px}
+.menu a{color:#F3E3C7;padding:6px 10px;border-radius:6px;font-weight:500;font-size:14px}
+.menu a:hover,.menu a.attivo{background:rgba(255,255,255,.12);color:#fff;text-decoration:none}
+
+main{max-width:1180px;margin:0 auto;padding:20px 16px 40px;outline:none}
+.piede{max-width:1180px;margin:0 auto;padding:16px 16px 32px;color:var(--muto);font-size:13px;border-top:1px solid var(--linea)}
+.piede p{margin:4px 0}
+
+.scheda{background:var(--carta);border:1px solid var(--linea);border-radius:10px;box-shadow:var(--ombra)}
+.pad{padding:18px 20px}
+.titolo-sez{font-family:var(--serif);font-size:19px;margin:0 0 12px;display:flex;align-items:baseline;gap:8px}
+.titolo-sez small{font-family:var(--sans);font-size:13px;color:var(--muto);font-weight:400}
+
+/* home */
+.eroe{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px;align-items:stretch;margin-bottom:20px}
+.eroe .intro{padding:26px 28px}
+.eroe h1{font-size:32px;line-height:1.15;margin-bottom:10px}
+.eroe p{color:var(--ink2);margin:0 0 10px;max-width:60ch}
+.numeri{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:20px}
+.numero{background:var(--crema);border-radius:8px;padding:14px 16px}
+.numero b{display:block;font-family:var(--serif);font-size:28px;line-height:1;color:var(--marrone)}
+.numero span{font-size:13px;color:var(--ink2)}
+.modulo{display:grid;grid-template-columns:2fr 2fr 1fr 1fr auto;gap:10px;align-items:end}
+.modulo label{display:block;font-size:12px;font-weight:600;color:var(--ink2);margin-bottom:4px}
+.modulo input,.modulo select{width:100%;border:1px solid var(--linea2);border-radius:6px;padding:8px 10px;background:#fff;color:var(--ink)}
+.btn{border:0;border-radius:6px;background:var(--marrone);color:#fff;padding:9px 18px;font-weight:600;cursor:pointer}
+.btn:hover{background:#6A4526}
+.btn.chiaro{background:var(--crema);color:var(--marrone)}
+.griglia-cognomi{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.cognome{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border:1px solid var(--linea);border-radius:8px;background:#fff;color:var(--ink)}
+.cognome:hover{border-color:var(--marrone2);text-decoration:none}
+.cognome b{font-family:var(--serif);font-size:16px}
+.cognome span{font-size:12px;color:var(--muto)}
+.due{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-top:20px}
+
+/* liste persone */
+.elenco{list-style:none;margin:0;padding:0}
+.elenco li+li{border-top:1px solid var(--linea)}
+.riga{display:flex;gap:12px;align-items:center;padding:10px 4px;color:var(--ink)}
+.riga:hover{background:#FBF6EE;text-decoration:none}
+.riga .info{min-width:0;flex:1}
+.riga .n{font-weight:600;display:block}
+.riga .sub{display:block;font-size:13px;color:var(--muto);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.avatar{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#fff;background:var(--muto);overflow:hidden;font-size:15px}
+.avatar.M{background:var(--uomo)} .avatar.F{background:var(--donna)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.paginazione{display:flex;gap:8px;justify-content:center;align-items:center;margin-top:14px;color:var(--muto);font-size:14px}
+
+/* persona */
+.persona-testa{display:flex;gap:20px;align-items:center;padding:22px 24px}
+.persona-testa .ritratto{width:96px;height:96px;border-radius:50%;flex:none;overflow:hidden;display:grid;place-items:center;font-family:var(--serif);font-size:34px;color:#fff;background:var(--muto);cursor:pointer;border:3px solid #fff;box-shadow:0 0 0 1px var(--linea2)}
+.persona-testa .ritratto.M{background:var(--uomo)} .persona-testa .ritratto.F{background:var(--donna)}
+.persona-testa .ritratto img{width:100%;height:100%;object-fit:cover}
+.persona-testa h1{font-size:30px;line-height:1.15}
+.persona-testa .vita{color:var(--ink2);margin-top:4px;font-size:15px}
+.persona-testa .id{font-size:12px;color:var(--muto);margin-top:4px}
+.schede-tab{display:flex;gap:4px;border-bottom:1px solid var(--linea);padding:0 16px;overflow-x:auto}
+.schede-tab button{border:0;background:none;padding:12px 14px;font-weight:600;color:var(--muto);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+.schede-tab button.attivo{color:var(--marrone);border-bottom-color:var(--marrone)}
+.corpo-persona{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:20px;margin-top:20px}
+.fatti{display:grid;grid-template-columns:120px 1fr;gap:8px 14px;margin:0}
+.fatti dt{font-size:13px;font-weight:600;color:var(--muto);padding-top:1px}
+.fatti dd{margin:0}
+.nota{white-space:normal;color:var(--ink2);background:#FBF6EE;border-left:3px solid var(--linea2);padding:10px 14px;border-radius:0 6px 6px 0;margin:0;font-size:14px}
+.nota+.nota{margin-top:8px}
+.blocco-fam{border:1px solid var(--linea);border-radius:8px;overflow:hidden;background:#fff}
+.blocco-fam+.blocco-fam{margin-top:14px}
+.blocco-fam h4{margin:0;padding:8px 12px;background:var(--crema);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);font-weight:600}
+.blocco-fam .elenco{padding:0 8px}
+.blocco-fam .figli{border-top:1px dashed var(--linea2);padding-left:22px}
+.blocco-fam .figli li{border-top:0}
+.etichetta{font-size:11px;font-weight:600;color:var(--muto);text-transform:uppercase;letter-spacing:.05em;padding:6px 4px 0}
+.vuoto{color:var(--muto);font-size:14px;padding:6px 4px}
+
+/* fonti e ricerche */
+.fonti{list-style:none;margin:0;padding:0}
+.fonti>li{border:1px solid var(--linea);border-radius:8px;background:#fff;padding:10px 12px}
+.fonti>li+li{margin-top:10px}
+.fonti p{margin:6px 0 0;font-size:14px;color:var(--ink2)}
+.tipo{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--crema);color:var(--ink2)}
+.t-nascita{background:#E3EEF4;color:#2F5F7E}.t-morte{background:#ECE6E1;color:#5E4C3E}.t-matrimonio{background:#F3E3E8;color:#8A4058}.t-battesimo{background:#E6EFE4;color:#41643B}.t-lapide{background:#EAE7F0;color:#5A4E7A}
+.ant{display:inline-block;margin-top:8px;font-size:13px;font-weight:600}
+.verifica{border-color:#E2C98F;background:#FFF8E8}
+.voce-verifica{border-left:3px solid #C99A2E;padding:6px 0 6px 12px;margin-top:8px}
+.voce-verifica p{margin:0;font-size:14px;color:var(--ink2)}
+.titolo-pag{font-size:28px;margin-bottom:8px}
+.intro-ric{color:var(--ink2);max-width:75ch;margin:0 0 14px}
+.numeri.ric{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.chip{border:1px solid var(--linea2);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;background:#fff}
+.chip span{color:var(--muto);font-weight:400}
+.chip.attivo{background:var(--marrone);border-color:var(--marrone);color:#fff}.chip.attivo span{color:#F1E3CF}
+.elenco-ric>li .riga{padding:4px 0 8px}
+.banda-ric{display:flex;align-items:center;gap:20px;margin-bottom:20px}
+.banda-ric p{margin:0;color:var(--ink2)}
+.banda-ric .btn{white-space:nowrap}
+
+/* albero */
+.albero-wrap{overflow-x:auto;padding:16px}
+.albero{display:grid;grid-template-columns:repeat(4,minmax(190px,1fr));grid-template-rows:repeat(8,minmax(56px,auto));gap:8px 22px;min-width:820px}
+.nodo{align-self:center;border:1px solid var(--linea);border-left:4px solid var(--linea2);background:#fff;border-radius:6px;padding:7px 10px;color:var(--ink);position:relative;min-height:50px}
+.nodo.M{border-left-color:var(--uomo)} .nodo.F{border-left-color:var(--donna)}
+.nodo:hover{box-shadow:var(--ombra);text-decoration:none}
+.nodo b{display:block;font-size:14px;line-height:1.25}
+.nodo span{font-size:12px;color:var(--muto)}
+.nodo.ignoto{border-style:dashed;color:var(--muto);background:transparent}
+.nodo.radice{background:var(--crema)}
+.nodo:not(.c0)::before{content:"";position:absolute;left:-23px;top:50%;width:22px;border-top:1px solid var(--linea2)}
+.discendenti ul{list-style:none;margin:0;padding-left:20px;border-left:1px solid var(--linea2)}
+.discendenti>ul{border-left:0;padding-left:0}
+.discendenti li{padding:3px 0}
+.discendenti .coppia{font-size:13px;color:var(--muto)}
+.discendenti details>summary{cursor:pointer;list-style:none}
+.discendenti details>summary::-webkit-details-marker{display:none}
+.discendenti details>summary::before{content:"▸";display:inline-block;width:14px;color:var(--muto)}
+.discendenti details[open]>summary::before{content:"▾"}
+
+/* galleria */
+.galleria{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.galleria button{border:1px solid var(--linea);border-radius:8px;background:#fff;padding:0;cursor:pointer;overflow:hidden;text-align:left;color:var(--ink)}
+.galleria img{width:100%;height:150px;object-fit:cover;display:block;background:var(--crema)}
+.galleria span{display:block;font-size:12px;padding:6px 8px;color:var(--ink2);line-height:1.3}
+.lightbox{position:fixed;inset:0;background:rgba(25,18,12,.92);z-index:50;display:flex;align-items:center;justify-content:center;padding:40px 56px}
+.lightbox[hidden]{display:none}
+.lightbox figure{margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center}
+.lightbox img{max-width:100%;max-height:calc(100vh - 120px);object-fit:contain;background:#fff;border-radius:4px}
+.lightbox figcaption{color:#EAD9BE;margin-top:10px;font-size:14px;text-align:center}
+.lightbox button{position:absolute;background:none;border:0;color:#fff;font-size:40px;cursor:pointer;padding:8px 14px;line-height:1}
+.lb-chiudi{top:8px;right:12px}.lb-prec{left:6px;top:50%;transform:translateY(-50%)}.lb-succ{right:6px;top:50%;transform:translateY(-50%)}
+.briciole{font-size:13px;color:var(--muto);margin-bottom:10px}
+.lettere{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px}
+.lettere a{padding:3px 9px;border-radius:5px;background:#fff;border:1px solid var(--linea);font-weight:600;font-size:13px}
+
+/* segnalazioni */
+.btn-segnala{margin-left:auto;align-self:flex-start;white-space:nowrap}
+.link-segnala{background:none;border:0;padding:0;color:var(--marrone);font-weight:600;cursor:pointer;text-decoration:underline}
+.modale{position:fixed;inset:0;background:rgba(25,18,12,.55);z-index:60;display:flex;align-items:center;justify-content:center;padding:16px}
+.modale[hidden]{display:none}
+.modale-box{background:var(--carta);border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.25);width:100%;max-width:520px;max-height:calc(100vh - 32px);overflow:auto;padding:22px 24px;position:relative}
+.modale-box h2{font-size:21px;margin:0 30px 6px 0}
+.modale-box label{display:block;font-size:13px;font-weight:600;color:var(--ink2);margin:12px 0 4px}
+.modale-box label span{font-weight:400;color:var(--muto)}
+.modale-box input,.modale-box select,.modale-box textarea{width:100%;border:1px solid var(--linea2);border-radius:6px;padding:8px 10px;background:#fff;color:var(--ink);font:inherit}
+.modale-box textarea{resize:vertical}
+.modale-chiudi{position:absolute;top:8px;right:10px;background:none;border:0;font-size:28px;line-height:1;color:var(--muto);cursor:pointer}
+.seg-chi{font-size:14px;color:var(--ink2);margin:0;background:var(--crema);padding:8px 10px;border-radius:6px}
+.seg-nota{font-size:12px;color:var(--muto);margin:14px 0 0}
+.seg-azioni{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+@media (max-width:860px){
+  .eroe,.due,.corpo-persona{grid-template-columns:minmax(0,1fr)}
+  .modulo{grid-template-columns:1fr 1fr}
+  .modulo .azione{grid-column:1/-1}
+  .numeri.ric{grid-template-columns:1fr 1fr}
+  .banda-ric{flex-direction:column;align-items:flex-start}
+  .menu{order:3;width:100%;justify-content:center}
+  .cerca-rapida{max-width:none;order:2;flex-basis:100%}
+}
+@media (max-width:520px){
+  .persona-testa{flex-direction:column;text-align:center;padding:18px}
+  .btn-segnala{margin:4px auto 0;align-self:center}
+  .persona-testa h1{font-size:24px}
+  .eroe h1{font-size:26px}
+  .fatti{grid-template-columns:1fr}
+  .fatti dt{padding-top:6px}
+  .marchio small{display:none}
+}
+@media print{.testata,.piede,.schede-tab,.lightbox{display:none}body{background:#fff}}
+
+.info-persona{max-width:900px}
+.intro-info{margin:14px 0 0;color:var(--muted,#7a6a58);font-size:.92rem;line-height:1.5}
+.rimando-info p{margin:0 0 14px;line-height:1.5}
+.rimando-info .btn{display:inline-block}
+
+.filtro-reg{display:flex;gap:8px;margin:0 0 14px}
+.filtro-reg input{flex:1;min-width:0;padding:9px 12px;border:1px solid #d8c9b4;border-radius:6px;font:inherit}
+.rimando-reg{margin:14px 0}
+.registro{margin-top:8px}
+.anno-reg{font-family:inherit;font-size:1.05rem;margin:22px 0 8px;padding-bottom:4px;border-bottom:1px solid #e6dccd;color:var(--marrone)}
+.batt{display:grid;grid-template-columns:130px minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px dashed #eadfcf}
+.batt-data{font-weight:600;color:#6b5843}
+.batt h4{margin:0 0 4px;font-size:1rem}
+.batt p{margin:2px 0;line-height:1.45}
+.batt .lab{display:inline-block;min-width:68px;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:#8a7760}
+.batt-rif{font-size:.85rem;color:#8a7760}
+.non-coll{font-style:italic}
+@media (max-width:600px){.batt{grid-template-columns:minmax(0,1fr);gap:2px}.filtro-reg{flex-direction:column}}

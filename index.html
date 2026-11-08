@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gli avi di Belnome · Albero genealogico</title>
+<meta name="description" content="Albero genealogico delle famiglie di Belnome (Val Boreca): ricerca degli antenati, schede, parentele, documenti e fotografie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="testata">
+  <div class="testata-in">
+    <a class="marchio" href="#/">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3c-5 0-9 4-9 8.5 0 2.2.9 4.1 2.3 5.6C7.4 18.4 6 20.4 6 22.8 6 26.2 8.8 29 12.3 29H15v-6.2l-3.6-2.6 1.2-1.6 2.4 1.7V15h2v5.3l3.1-2.3 1.2 1.6-4.3 3.2V29h2.7c3.5 0 6.3-2.8 6.3-6.2 0-2.4-1.4-4.4-3.3-5.7 1.4-1.5 2.3-3.4 2.3-5.6C25 7 21 3 16 3z"/></svg>
+      <span><b>Gli avi di Belnome</b><small>Albero genealogico della Val Boreca</small></span>
+    </a>
+    <form class="cerca-rapida" id="cercaRapida" role="search">
+      <input id="qRapida" type="search" placeholder="Cerca un nome…" aria-label="Cerca un nome" autocomplete="off">
+      <button type="submit" aria-label="Cerca"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 104.47 10l4.27 4.27 1.42-1.42-4.27-4.27A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg></button>
+    </form>
+    <nav class="menu">
+      <a href="#/">Inizio</a>
+      <a href="#/cognomi">Cognomi</a>
+      <a href="#/cerca">Ricerca</a>
+      <a href="#/ricerche">Fonti</a>
+      <a href="#/registro">Registro</a>
+    </nav>
+  </div>
+</header>
+<main id="app" tabindex="-1"><p class="caricamento">Caricamento dell’albero…</p></main>
+<div id="segnala" class="modale" hidden role="dialog" aria-modal="true" aria-labelledby="segTit">
+  <form class="modale-box" id="segForm">
+    <button type="button" class="modale-chiudi" aria-label="Chiudi">×</button>
+    <h2 id="segTit">Segnala un errore o un dato mancante</h2>
+    <p class="seg-chi" id="segChi"></p>
+    <label for="segTipo">Che cosa vuoi segnalare?</label>
+    <select id="segTipo">
+      <option>Un errore (nome, data, parentela)</option>
+      <option>Un dato mancante (persona, data, matrimonio, figli)</option>
+      <option>Una fotografia o un documento da aggiungere</option>
+      <option>Altro</option>
+    </select>
+    <label for="segTesto">Descrizione</label>
+    <textarea id="segTesto" rows="6" required placeholder="Per esempio: la data di morte è il 12 marzo 1921, come risulta dalla lapide nel cimitero di Belnome."></textarea>
+    <label for="segFonte">Da dove viene l’informazione? <span>(facoltativo)</span></label>
+    <input id="segFonte" placeholder="ricordo di famiglia, atto, lapide, documento…">
+    <label for="segNome">Il tuo nome <span>(facoltativo)</span></label>
+    <input id="segNome" autocomplete="name">
+    <p class="seg-nota">Premendo «Prepara l’email» si apre il programma di posta con il messaggio già scritto, indirizzato a mauro.almangano@gmail.com: controllalo e invialo. Se le foto vanno allegate, aggiungile all’email.</p>
+    <div class="seg-azioni"><button type="button" class="btn chiaro modale-annulla">Annulla</button><button type="submit" class="btn">Prepara l’email</button></div>
+  </form>
+</div>
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-chiudi" aria-label="Chiudi">×</button>
+  <button class="lb-prec" aria-label="Precedente">‹</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="lb-succ" aria-label="Successiva">›</button>
+</div>
+<footer class="piede">
+  <p>Dati tratti dall’albero genealogico di Belnome, dai registri parrocchiali della villa di Belnome e dagli atti di stato civile del Comune di Ottone. <span id="aggiornato"></span></p>
+  <p>Hai trovato un errore o conosci un dato che manca? <button type="button" class="link-segnala" data-segnala="">Scrivi una segnalazione</button></p>
+</footer>
+<script src="dati/albero.js"></script>
+<script src="dati/registro.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
