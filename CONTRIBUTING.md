@@ -1,31 +1,26 @@
-# Linee Guida per i Contributi
+# Linee Guida per la Collaborazione
 
-Grazie per l'interesse dimostrato verso il progetto Albero-Belnome. Ogni contributo, che si tratti di correzioni di bug, miglioramenti della documentazione o sviluppo di nuove funzionalità, è un valore aggiunto per il progetto.
+Grazie per l'interesse verso Albero-Belnome. Poiché il nostro progetto fornisce un servizio incentrato sull'intervento umano e sulla gestione di strutture complesse, il contributo si focalizza principalmente sull'ottimizzazione dei processi operativi, sull'aggiornamento della documentazione e sulla condivisione di feedback costruttivi.
 
-## Segnalazione di Bug e Richiesta di Funzionalità
-Per segnalare anomalie o suggerire miglioramenti, si prega di utilizzare la sezione "Issues" del repository GitHub.
-Nella segnalazione di un bug è opportuno includere:
-- Il sistema operativo e la versione dell'ambiente di esecuzione.
-- I passaggi dettagliati per riprodurre l'errore.
-- Il comportamento atteso e il comportamento effettivamente riscontrato.
-- Eventuali log di errore.
+## Segnalazioni e Proposte
+Il canale ufficiale per interagire con il team è la sezione "Issues" del repository GitHub. Si invita a utilizzarla per:
+- Proposte di miglioramento: suggerimenti su come perfezionare il servizio e le metodologie utilizzate.
+- Segnalazione di criticità: feedback su eventuali inefficienze organizzative o passaggi poco chiari nella documentazione.
 
-## Sviluppo e Pull Request
-Se si desidera contribuire attivamente al codice, seguire questa procedura:
+## Modifiche alla Documentazione (Pull Request)
+Qualora si desideri proporre un aggiornamento diretto ai documenti, ai modelli o alle linee guida del servizio, la procedura standard è la seguente:
 
 1. Effettuare il Fork del repository.
-2. Creare un branch dedicato alla propria modifica, utilizzando una nomenclatura chiara (es. `feature/nome-funzionalita` o `fix/descrizione-bug`).
+2. Creare un branch dedicato alla proposta, utilizzando un nome esplicativo (es. `proposta/revisione-linee-guida`).
    ```bash
-   git checkout -b feature/nuova-funzione
+   git checkout -b proposta/revisione-linee-guida
    ```
-3. Effettuare i commit delle modifiche assicurandosi di redigere messaggi descrittivi e concisi.
+3. Apportare le modifiche ai file di testo, assicurandosi di rispettare lo stile formale del progetto.
+4. Eseguire il commit delle modifiche con un messaggio descrittivo.
    ```bash
-   git commit -m "Aggiunta funzionalità di esportazione JSON"
+   git commit -m "Aggiornata la sezione relativa all'organizzazione dei processi"
    ```
-4. Eseguire il push del branch sul proprio fork.
-   ```bash
-   git push origin feature/nuova-funzione
-   ```
-5. Aprire una Pull Request verso il branch principale del repository originale, fornendo una descrizione dettagliata del lavoro svolto.
+5. Eseguire il push del branch sul proprio fork.
+6. Aprire una Pull Request verso il repository originale per sottoporre le modifiche alla revisione del team.
 
-Tutte le Pull Request saranno soggette a revisione prima dell'integrazione.
+Tutte le proposte verranno valutate collegialmente per misurarne l'impatto sul servizio prima dell'eventuale approvazione.
