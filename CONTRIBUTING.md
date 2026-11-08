@@ -1,26 +1,19 @@
-# Linee Guida per la Collaborazione
+# Come contribuire ad Albero-Belnome
 
-Grazie per l'interesse verso Albero-Belnome. Poiché il nostro progetto fornisce un servizio incentrato sull'intervento umano e sulla gestione di strutture complesse, il contributo si focalizza principalmente sull'ottimizzazione dei processi operativi, sull'aggiornamento della documentazione e sulla condivisione di feedback costruttivi.
+Grazie per il tuo interesse nel contribuire! Qualsiasi tipo di contributo è il benvenuto: dalla correzione di errori di battitura allo sviluppo di nuove funzionalità.
 
-## Segnalazioni e Proposte
-Il canale ufficiale per interagire con il team è la sezione "Issues" del repository GitHub. Si invita a utilizzarla per:
-- Proposte di miglioramento: suggerimenti su come perfezionare il servizio e le metodologie utilizzate.
-- Segnalazione di criticità: feedback su eventuali inefficienze organizzative o passaggi poco chiari nella documentazione.
+## Segnalare Bug o Richiedere Funzionalità
+Utilizza la scheda **Issues** su GitHub. Quando segnali un problema, ti preghiamo di includere:
+- Il sistema operativo in uso.
+- I passaggi esatti per riprodurre l'errore.
+- Il comportamento atteso rispetto a quello riscontrato.
 
-## Modifiche alla Documentazione (Pull Request)
-Qualora si desideri proporre un aggiornamento diretto ai documenti, ai modelli o alle linee guida del servizio, la procedura standard è la seguente:
-
-1. Effettuare il Fork del repository.
-2. Creare un branch dedicato alla proposta, utilizzando un nome esplicativo (es. `proposta/revisione-linee-guida`).
-   ```bash
-   git checkout -b proposta/revisione-linee-guida
-   ```
-3. Apportare le modifiche ai file di testo, assicurandosi di rispettare lo stile formale del progetto.
-4. Eseguire il commit delle modifiche con un messaggio descrittivo.
-   ```bash
-   git commit -m "Aggiornata la sezione relativa all'organizzazione dei processi"
-   ```
-5. Eseguire il push del branch sul proprio fork.
-6. Aprire una Pull Request verso il repository originale per sottoporre le modifiche alla revisione del team.
-
-Tutte le proposte verranno valutate collegialmente per misurarne l'impatto sul servizio prima dell'eventuale approvazione.
+## Processo per inviare modifiche (Pull Request)
+1. Fai un **Fork** di questo repository.
+2. Crea un branch per la tua modifica:
+   `git checkout -b feature/NuovaFunzione` oppure `git checkout -b fix/RisoluzioneBug`
+3. Esegui il commit delle tue modifiche in modo descrittivo:
+   `git commit -m 'Aggiunta la nuova funzionalità X'`
+4. Fai il push sul tuo fork:
+   `git push origin feature/NuovaFunzione`
+5. Apri una **Pull Request** verso il repository originale di Mauro Almangano, descrivendo nel dettaglio le modifiche apportate.
