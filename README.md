@@ -1,7 +1,7 @@
 # 🌳 Albero-Belnome
 
 > Un'applicazione o libreria per la gestione di strutture ad albero. 
-> *(Sostituisci questa riga con una breve descrizione del tuo progetto)*.
+
 
 ## 🌟 Caratteristiche Principali
 * Funzionalità 1 (es. Algoritmo di ricerca ottimizzato)
